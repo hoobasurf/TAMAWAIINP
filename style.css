@@ -1,0 +1,131 @@
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fond magique */
+body {
+  background: url('assets/images/background-magic.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to bottom, #fceff9, #e0f7fa);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Animation d'entrée */
+#intro-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #ffffff 0%, #ffe3f1 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: fadeOut 3s ease-in-out forwards;
+  z-index: 10;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+.magic-logo img {
+  width: 80px;
+  margin-bottom: 1rem;
+  animation: logoGlow 2s infinite ease-in-out;
+}
+
+@keyframes logoGlow {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px #f3a0c0); }
+  50% { transform: scale(1.05); filter: drop-shadow(0 0 20px #ffb3d5); }
+}
+
+.magic-logo h1 {
+  font-size: 2.5rem;
+  color: #ff69b4;
+  margin-bottom: 0.5rem;
+}
+
+.magic-logo p {
+  font-size: 1.2rem;
+  color: #a558ad;
+  font-style: italic;
+}
+
+/* Application principale */
+.app {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 2rem;
+  margin-top: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Masquer l’app au départ */
+.hidden {
+  display: none;
+}
+
+/* En-tête */
+header h2 {
+  text-align: center;
+  color: #a03cb5;
+  margin-bottom: 1rem;
+}
+
+/* Zone de messages */
+.messages {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background: #fafafa;
+  margin-bottom: 1rem;
+}
+
+/* Champ de saisie */
+form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #f48fb1;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 0 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #ec407a;
+}

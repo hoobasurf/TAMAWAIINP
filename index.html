@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tamawahi ✨</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="assets/icon-NP.png" />
+</head>
+<body>
+
+  <!-- Animation d'entrée magique -->
+  <div id="intro-animation" class="fade-in">
+    <div class="magic-logo">
+      <img src="assets/images/icon-heart-np.png" alt="Icône cœur NP" class="logo">
+      <h1>Tamawahi</h1>
+      <p>Papa et Neela</p>
+    </div>
+  </div>
+
+  <!-- Contenu principal masqué pendant l'animation -->
+  <div class="app hidden">
+    <header>
+      <h2>💬 Messagerie magique</h2>
+    </header>
+    
+    <div class="messages" id="messages">
+      <!-- Messages apparaîtront ici -->
+    </div>
+
+    <form id="chat-form">
+      <input type="text" id="message-input" placeholder="Écris ton message..." required />
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
